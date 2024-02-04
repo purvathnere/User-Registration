@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: pink;
+    }
+
+    form {
+      background: #fff;
+      max-width: 400px;
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    label {
+      display: inline-block;
+      width: 30%;
+    
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .gender {
+      display: flex;
+      align-items: center;
+    }
+
+    .gender label {
+      margin-right: 2px;
+      padding: 0;
+    }
+
+    .gender input[type="radio"] {
+      margin: -100px;
+      padding: 0;
+    }
+
+
+    input,
+    select {
+      display: inline-block;
+      width: 65%;
+      /* Adjust the width as needed */
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    input[type="checkbox"] {
+      margin-bottom: 20px;
+      margin-right: -100px;
+    }
+
+    .agree {
+      width: 55%;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button[type="reset"] {
+      background-color: #f44336;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+    }
+
+    .buttons button {
+      margin: 1px 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form id="myform" action="RegisterServlet" method="post">
+    <h1>College Registration</h1>
+    <label for="name" >Name:</label>
+    <input type="text" id="name" name="user_name"  placeholder="Write your name here" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="user_password"  placeholder="Write your name here" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="user_email"  placeholder="Write your name here" required>
+    <div class="gender">
+      <label>Gender:</label>
+      <input type="radio" id="male" name="user_gender" value="male" required>
+      <label for="male">Male</label>
+
+      <input type="radio" id="female" name="user_gender" value="female" required>
+      <label for="female">Female</label>
+
+    </div>
+
+    <label for="course">Course:</label>
+    <select id="course" name="user_course" required>
+      <option value="">Select</option>
+      <option value="math">Math</option>
+      <option value="science">Science</option>
+      <option value="history">History</option>
+      <option value="science">Science</option>
+      <option value="commerce">Commerce</option>
+      <option value="Arts">Arts</option>
+      <option value="agriculture">Agriculture</option>
+    </select>
+
+    <input type="checkbox" value="checked" name="condition" >
+    <label class="agree" for="agree">I agree to the terms and conditions </label>
+    <div class="buttons">
+
+
+      <button type="submit">Register</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+
+</body>
+
+</html>
+  
